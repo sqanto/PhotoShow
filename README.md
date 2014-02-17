@@ -26,6 +26,14 @@ Note : you may create those directories wherever you want, and give them the nam
 
 Edit the file `config.php` that is inside your PhotoShow folder. It is advised to put absolute paths for each of the entries, although relative paths should work fine.
 
+
+### move crontab
+
+crontab -e 
+*/5 * * * * /home/photo/crontab.sh
+
+
+
 ### Go to your website
 
 Now, use your favorite web browser to go to your PhotoShow website. You should be asked to create the main account. This account will be the admin of the website.
