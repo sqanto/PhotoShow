@@ -1,3 +1,10 @@
 #!/bin/bash
 
-find /home/photo -iname "*.jpg" -exec jhead -n%Y%m%d-%H%M%S {} \+
+find /mnt/nass/gallery/photo/ -iname \*.JPG -exec jhead -n%Y-%m-%d_%H-%M-%S {} \;
+
+find /mnt/nass/gallery/photo/ -iname \*.JPG -exec mogrify -resize 1024x768 {} \;
+
+chown -R www-data /mnt/nass/gallery/photo/
+
+chmod 777 -R /mnt/nass/gallery/photo/
+# *.jpg
